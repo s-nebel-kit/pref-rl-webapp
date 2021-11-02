@@ -12,4 +12,6 @@ class Preference(models.Model):
 
     label = models.IntegerField('preference label', db_index=True, blank=True, null=True)
 
+    def __str__(self) -> str:
+        return str(self.id)
     
