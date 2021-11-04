@@ -12,12 +12,13 @@
 
 <body>
     {{query}}
+    {% load media %}
     <video width="400" loop>
-        <source src="{{video_url_left}}" type="video/mp4">
+        <source src="{% media video_url_left %}" type="video/webm">
         Your browser does not support HTML5 video.
     </video>
     <video width="400" loop>
-        <source src="{{video_url_right}}" type="video/mp4">
+        <source src="{% media video_url_right %}" type="video/webm">
         Your browser does not support HTML5 video.
     </video>
     <input type="button" onclick="" value="Left">

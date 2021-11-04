@@ -126,6 +126,10 @@ STATICFILES_DIRS =[
     os.path.join(BASE_DIR, '../../Pref-RL'),
 ]
 
+MEDIA_ROOT = '/home/BA/Pref-RL/Pref-RL/videofiles/'
+
+MEDIA_URL = '/videofiles/'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 

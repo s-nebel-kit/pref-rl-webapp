@@ -1,6 +1,5 @@
 from django.http.response import Http404
 from django.shortcuts import get_object_or_404, render
-from django.template import context
 
 from .models import Preference
 
