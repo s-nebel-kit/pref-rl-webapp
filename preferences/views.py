@@ -14,10 +14,10 @@ def index(request):
 
 def query(request, query_id):
 
-    query = get_object_or_404(Preference, pk=query_id)
+    query = get_object_or_404(Preference, uuid=query_id)
     context = {
         'query': query,
-        'video_url_left': query.video_url_left,
-        'video_url_right': query.video_url_right
+        'video_url_left': query.video_file_path_left,
+        'video_url_right': query.video_file_path_right
     }
     return render(request, 'preferences/query.html', context)
