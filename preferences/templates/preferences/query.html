@@ -12,7 +12,7 @@
 
 <body>
     {{query}}
-    
+
     <video width="400" loop autoplay muted>
         <source src="{{ video_url_left }}" type="video/webm">
         Your browser does not support HTML5 video.
@@ -21,10 +21,12 @@
         <source src="{{ video_url_right }}" type="video/webm">
         Your browser does not support HTML5 video.
     </video>
-    <input type="button" onclick="" value="Left">
-    <input type="button" onclick="" value="Equal">
-    <input type="button" onclick="" value="Skip">
-    <input type="button" onclick="" value="Right">
+    <form>
+        <button type="submit" value="Left">Left</button>
+        <button type="submit" value="Equal">Equal</button>
+        <button type="submit" value="Skip">Skip</button>
+        <button type="submit" value="Right">Right</button>
+    </form>
 </body>
 
 </html>

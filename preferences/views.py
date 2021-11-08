@@ -15,6 +15,8 @@ def index(request):
 def query(request, query_id):
 
     query = get_object_or_404(Preference, uuid=query_id)
+    #if request.method == 'POST':
+
     context = {
         'query': query,
         'video_url_left': query.video_file_path_left,
