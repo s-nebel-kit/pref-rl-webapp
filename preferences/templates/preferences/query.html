@@ -21,11 +21,12 @@
         <source src="{{ video_url_right }}" type="video/webm">
         Your browser does not support HTML5 video.
     </video>
-    <form>
-        <button type="submit" value="Left">Left</button>
-        <button type="submit" value="Equal">Equal</button>
-        <button type="submit" value="Skip">Skip</button>
-        <button type="submit" value="Right">Right</button>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" name="action" value="Left">Left</button>
+        <button type="submit" name="action" value="Indifferent">Equal</button>
+        <button type="submit" name="action" value="Skip">Skip</button>
+        <button type="submit" name="action" value="Right">Right</button>
     </form>
 </body>
 
