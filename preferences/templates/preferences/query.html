@@ -2,12 +2,13 @@
 <html>
 
 <head>
+    {% load static %}
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Query</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='query.css'>
+    <script src="{% static 'preferences/query.js' %}"></script>
 </head>
 
 <body>
@@ -23,10 +24,10 @@
     </video>
     <form method="post">
         {% csrf_token %}
-        <button type="submit" name="action" value="Left">Left</button>
-        <button type="submit" name="action" value="Indifferent">Equal</button>
-        <button type="submit" name="action" value="Skip">Skip</button>
-        <button type="submit" name="action" value="Right">Right</button>
+        <button id='leftButton' type="submit" name="action" value="Left">Left</button>
+        <button id= 'equalsButton'type="submit" name="action" value="Indifferent">Equal</button>
+        <button id='skipButton' type="submit" name="action" value="Skip">Skip</button>
+        <button id='rightButton' type="submit" name="action" value="Right">Right</button>
     </form>
 </body>
 
